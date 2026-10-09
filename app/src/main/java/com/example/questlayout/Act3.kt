@@ -28,9 +28,11 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun ActivityLessPerson(modifier: Modifier = Modifier) {
+
     Box(
         modifier = modifier.fillMaxSize()
     ) {
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -38,6 +40,7 @@ fun ActivityLessPerson(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Top
         ) {
+
             // Judul program studi
             Text(
                 text = stringResource(R.string.prodi),
@@ -64,12 +67,14 @@ fun ActivityLessPerson(modifier: Modifier = Modifier) {
                     containerColor = Color.DarkGray
                 )
             ) {
+
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(16.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
+
                     // Logo UMY
                     Image(
                         painter = painterResource(
@@ -89,6 +94,7 @@ fun ActivityLessPerson(modifier: Modifier = Modifier) {
 
                     // Informasi mahasiswa
                     Column {
+
                         Text(
                             text = stringResource(R.string.Nama),
                             fontSize = 22.sp,
@@ -120,5 +126,15 @@ fun ActivityLessPerson(modifier: Modifier = Modifier) {
                 }
             }
         }
+
+        // Copyright di bagian bawah layar
+        Text(
+            text = stringResource(R.string.copy),
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 50.dp),
+            fontSize = 14.sp,
+            color = Color.Gray
+        )
     }
 }
